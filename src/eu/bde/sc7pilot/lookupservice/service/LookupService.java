@@ -23,7 +23,7 @@ import com.vividsolutions.jts.io.WKTWriter;
 import eu.bde.sc7pilot.lookupservice.FuzzySearch;
 import eu.bde.sc7pilot.lookupservice.Location;
 import eu.bde.sc7pilot.lookupservice.webconfig.ResponseMessage;
-
+@Path("/")
 public class LookupService {
 
 	@POST
