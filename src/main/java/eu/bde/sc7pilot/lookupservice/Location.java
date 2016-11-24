@@ -52,8 +52,8 @@ public class Location implements Constants, Comparable<Location> {
 
     @Override
     public int compareTo(Location t) {
-        Double thisArea = similarity * geometry.getArea();
-        Double otherArea = t.getSimilarity() / t.getGeometry().getArea();
+        Double thisArea = Math.pow(similarity, 2.0) / Math.pow(geometry.getArea(), 0.10);
+        Double otherArea = Math.pow(t.getSimilarity(), 2.0) / Math.pow(t.getGeometry().getArea(), 0.10);
         return otherArea.compareTo(thisArea);
     }
     

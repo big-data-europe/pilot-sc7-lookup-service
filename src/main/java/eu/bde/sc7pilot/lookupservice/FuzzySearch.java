@@ -129,8 +129,7 @@ public class FuzzySearch implements Constants {
     public static void main(String[] args) throws Exception {
         String filePath = "gadm28.csv";
         FuzzySearch fs = new FuzzySearch(filePath);
-//        String[] queries = {"Berlin", "Paris", "Wien", "Amsterdam", "Brussels", "London", "Rome", "Athens", "Warsaw", "Moscow", "Amatrice" };
-        String[] queries = { "Mafraq" };
+        String[] queries = {"Berlin", "Paris", "Wien", "Amsterdam", "Brussels", "London", "Roma", "Athens", "Warsaw", "Moscow", "Amatrice", "Mafraq"};
         for (String q : queries) {
             Location result = fs.processQuery(q);
             if (result != null) {
