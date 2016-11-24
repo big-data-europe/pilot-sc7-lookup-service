@@ -11,7 +11,6 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.Polygon;
 import eu.bde.sc7pilot.lookupservice.FuzzySearch;
 import eu.bde.sc7pilot.lookupservice.Location;
 import eu.bde.sc7pilot.lookupservice.webconfig.ResponseMessage;
