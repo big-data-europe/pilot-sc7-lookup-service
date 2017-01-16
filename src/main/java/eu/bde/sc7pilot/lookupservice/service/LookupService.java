@@ -21,7 +21,7 @@ public class LookupService {
     private final static String filePath = "/gadm28.csv";
     private FuzzySearch fs;
     
-    public LookupService() {
+    public LookupService() throws Exception {
         fs = new FuzzySearch(filePath);
     }
     
