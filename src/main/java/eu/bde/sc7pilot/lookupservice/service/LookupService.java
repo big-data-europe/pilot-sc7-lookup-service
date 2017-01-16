@@ -22,15 +22,7 @@ public class LookupService {
     private FuzzySearch fs;
     
     public LookupService() {
-        try {
-            fs = new FuzzySearch(filePath);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            respMessage.setMessage(e.getMessage());
-            respMessage.setCode(400);
-            throw new WebApplicationException(
-                    Response.status(HttpURLConnection.HTTP_BAD_REQUEST).entity(respMessage).build());
-        }
+        fs = new FuzzySearch(filePath);
     }
     
     @POST
