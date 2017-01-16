@@ -30,6 +30,8 @@ public class LookupService {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getCoordinates(List<String> locationNames) {
+        long time1 = System.currentTimeMillis();
+        
         ResponseMessage respMessage = new ResponseMessage();
         if (locationNames == null || locationNames.isEmpty()) {
             respMessage.setMessage("a non empty list of location names is required into the request body.");
@@ -57,8 +59,11 @@ public class LookupService {
             } else {
                 geometries.add(i, null);
             }
-
         }
+        
+        long time2 = System.currentTimeMillis();
+        System.out.println("Query time\t:\t" + (time2-time1));
+                
         return Response.status(200).entity(geometries).build();
     }
 }
